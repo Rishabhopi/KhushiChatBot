@@ -7,11 +7,11 @@ load_dotenv()
 API_ID = int(getenv("API_ID", 27353035))
 API_HASH = getenv("API_HASH", "cf2a75861140ceb746c7796e07cbde9e")
 BOT_TOKEN = getenv("BOT_TOKEN", None)
-OWNER_ID = int(getenv("OWNER_ID", "5311223486"))
+OWNER_ID = int(getenv("OWNER_ID", "5738579437"))
 MONGO_URL = getenv("MONGO_URL", None)
-SUPPORT_GRP = getenv("SUPPORT_GRP", "tmm_support_chat")
-UPDATE_CHNL = getenv("UPDATE_CHNL", "tmm_heroku_world")
-OWNER_USERNAME = getenv("OWNER_USERNAME", "moh_maya_official")
+SUPPORT_GRP = getenv("SUPPORT_GRP", "Ur_support07")
+UPDATE_CHNL = getenv("UPDATE_CHNL", "Ur_rishu_143")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "Rishu1286")
 
 # Random Start Images
 IMG = [
