@@ -1,10 +1,10 @@
 import datetime, time, asyncio
 from pyrogram import Client, filters
 from database.users_chats_db import db
-from info import ADMINS
+from info import OWNER_ID
 from utils import broadcast_messages, broadcast_messages_group
 
-@Client.on_message(filters.command("broadcast") & filters.user(ADMINS))
+@Client.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
 async def pm_broadcast(bot, message):
     b_msg = await bot.ask(chat_id = message.from_user.id, text = "Now Send Me Your Broadcast Message")
     try:
@@ -48,7 +48,7 @@ async def pm_broadcast(bot, message):
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-@Client.on_message(filters.command("grp_broadcast") & filters.user(ADMINS))
+@Client.on_message(filters.command("grp_broadcast") & filters.user(OWNER_ID))
 async def broadcast_group(bot, message):
     b_msg = await bot.ask(chat_id = message.from_user.id, text = "Now Send Me Your Broadcast Message")
     groups = await db.get_all_chats()
